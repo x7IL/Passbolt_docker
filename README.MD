@@ -7,17 +7,16 @@
   ╚═══╝  ╚═╝╚═╝  ╚═╝   ╚═╝    ╚═════╝  ╚═════╝  ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝      ╚═══╝  ╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝
 ```
 
-# Passbolt avec docker (Linux) et son utilisation
+# Passbolt with docker (Linux) and its use
 
-# Sommaire
+# Contents
 
-## 2. Installation local (avec scripts)
+## 2. local installation (with scripts)
 
-- [Pré-requis](#pre-requis-script) _Installation de docker_
-- [Build l'image](#build-image-script) _Build les images docker_
-- [Run l'image](#run-image-script) _Run les images docker_
-- [Créer un utilisateur](#create-user) _Création d'un utilisateur_
-
+- [Pre-requisites](#pre-requisites-script) _Installing docker__ (Linux)
+- [Build image](#build-image-script) _Build docker images_
+- [Run the image](#run-image-script) _Run the docker images_
+- [Create a user](#create-user) _Create a user_
 ---
 
 ```
@@ -28,34 +27,34 @@
 ███████╗╚██████╔╝╚██████╗██║  ██║███████╗    ██████║      ███████║╚██████╗██║  ██║██║██║        ██║   
 ╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝╚══════╝    ╚═════╝      ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝                                                                                                         
 ```
-_Installation local avec script_
-## Pre-requis script
+_Local installation with script_
+## Script prerequisites
 
-> Installer [docker](https://docs.docker.com/engine/install/)
+> Install [docker](https://docs.docker.com/engine/install/)
 
-_Pour docker:_
+_For docker:_
 
 - Distro [Debian](https://docs.docker.com/engine/install/debian/)
 - Distro [Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
-- Autres [Overview](https://docs.docker.com/engine/install/)
-- 
+- Others [Overview](https://docs.docker.com/engine/install/)
+
 ## Build image script
 
-_Mettez-vous dans le répertoire du script /script_local/build_dev_local.sh_
+_Go to the script directory /script/local/build.sh_.
 
 ---
-_Pour build les images executer cette commande_
+_To build the images run this command_.
 
 ```
-./build_dev_local.sh
+./build.sh
 ```
 
 ## Run image script
 
-_Mettez-vous dans le répertoire du script /script_local/run_dev_local.sh_
+_Go to the script directory /script/local/run_dev_local.sh_.
 
 ---
-_Pour run le conteneur executer cette commande_
+_To run the container, execute this command_.
 
 ```
 ./run_dev_local.sh
@@ -70,9 +69,10 @@ sudo groupadd www-data
 sudo usermod -a -G www-data www-data
 ```
 
-_Il faut un web user sur la machine qui va lancer la commande de création d'utilisateurs_
+_You need a web user on the machine that will run the user creation command_.
 
-_Executez cette commande pour la création d'un utiisateur:_
+
 ```
 docker exec -it vault.virtuoworks.local su -s /bin/bash -c "./bin/cake passbolt register_user -i" www-data
 ```
+_Run this command to create a user:_
