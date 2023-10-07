@@ -35,11 +35,11 @@ docker image rm \
 docker build \
   -t "$PASSBOLT_LATEST" \
   -t "$PASSBOLT_TAGGED" \
-  ${SCRIPT_DIR}/../docker/passbolt
+  ${SCRIPT_DIR}/../../docker/passbolt
 
 # Build mariadb
 docker build \
   -t "$MARIADB_LATEST" \
   -t "$MARIADB_TAGGED" \
-  ${SCRIPT_DIR}/../docker/mariadb
+  ${SCRIPT_DIR}/../../docker/mariadb
 

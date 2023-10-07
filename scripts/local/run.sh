@@ -13,11 +13,11 @@ PASSBOLT_CONTAINER_NAME="vault.local"
 MARIADB_IMAGE_NAME="local/vault/db"
 MARIADB_CONTAINER_NAME="db.vault.local"
 MARIADB_LATEST="$MARIADB_IMAGE_NAME:latest"
-MARIADB_DATA_PATH="${SCRIPT_DIR}/../docker/mariadb/data"
+MARIADB_DATA_PATH="${SCRIPT_DIR}/../../docker/mariadb/data"
 
 # Environment file
-ENV_FILE_PASSBOLT=${SCRIPT_DIR}/../docker/passbolt/.env
-ENV_FILE_DB=${SCRIPT_DIR}/../docker/mariadb/.env
+ENV_FILE_PASSBOLT=${SCRIPT_DIR}/../../docker/passbolt/.env
+ENV_FILE_DB=${SCRIPT_DIR}/../../docker/mariadb/.env
 
 
 # Stopping any running containers
