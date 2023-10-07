@@ -13,7 +13,7 @@
 
 ## 1.. local installation (with scripts)
 
-- [Pre-requisites](#pre-requisites-script) _Installing docker__ (Linux)
+- [Pre-requisites](#pre-requisites-script) _Installing docker_ (Linux)
 - [Build image](#build-image-script) _Build docker images_
 - [Run the image](#run-image-script) _Run the docker images_
 - [Create a user](#create-user) _Create a user_
@@ -57,7 +57,7 @@ _Go to the script directory /script/local/run_dev_local.sh_.
 _To run the container, execute this command_.
 
 ```
-./run_dev_local.sh
+./run.sh
 ```
 ## Create user
 
