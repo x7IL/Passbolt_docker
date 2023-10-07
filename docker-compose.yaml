@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  passbolt:
+    build: . # Construit l'image à partir du Dockerfile dans le répertoire courant
+    image: passbolt:latest # Nom de l'image construite
+    env_file:
+      - .env
+    environment:
+      - DATASOURCES_DEFAULT_HOST=${DATASOURCES_DEFAULT_HOST}
+      - DATASOURCES_DEFAULT_USERNAME=${DATASOURCES_DEFAULT_USERNAME}
+      - DATASOURCES_DEFAULT_PASSWORD=${DATASOURCES_DEFAULT_PASSWORD}
+      - DATASOURCES_DEFAULT_DATABASE=${DATASOURCES_DEFAULT_DATABASE}
+      - APP_FULL_BASE_URL=${APP_FULL_BASE_URL}
+   ports:
+      - "443:443"
+    depends_on:
+      - mariadb
+    networks:
+      - passbolt_network
+
+  mariadb:
+    image: mariadb:10
+    env_file:
+      - .env
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    networks:
+      - passbolt_network
+
+networks:
+  passbolt_network:
