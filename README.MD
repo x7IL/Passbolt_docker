@@ -11,7 +11,7 @@
 
 # Contents
 
-## 2. local installation (with scripts)
+## 1.. local installation (with scripts)
 
 - [Pre-requisites](#pre-requisites-script) _Installing docker__ (Linux)
 - [Build image](#build-image-script) _Build docker images_
@@ -28,7 +28,7 @@
 ╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝╚══════╝    ╚═════╝      ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝                                                                                                         
 ```
 _Local installation with script_
-## Script prerequisites
+## Pre requisites script
 
 > Install [docker](https://docs.docker.com/engine/install/)
 
